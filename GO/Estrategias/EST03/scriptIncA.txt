@@ -1,0 +1,3 @@
+RUN{
+    BACKUP INCREMENTAL level 1 cumulative TABLESPACE TS1;
+}

@@ -1,0 +1,21 @@
+#################################################################
+#-EIF402: Práctica Laboratorio
+#-Versión: 1
+#-initGO.ORA
+#-Autor: Grupo 2
+################################################################
+db_name='GO'
+memory_target=1G
+processes = 150
+audit_file_dest='C:\GO\Admin\orcl'
+audit_trail ='db'
+db_block_size=8192
+db_domain=''
+db_recovery_file_dest='C:\GO\FlashRecoveryArea'
+db_recovery_file_dest_size=2G
+dispatchers='(PROTOCOL=TCP) (SERVICE=ORCLXDB)'
+open_cursors=300 
+remote_login_passwordfile='SHARED'
+undo_tablespace='UNDOTBS1'
+control_files = ('C:\GO\Control\Control_1\control1.dbf')
+compatible ='11.2.0'

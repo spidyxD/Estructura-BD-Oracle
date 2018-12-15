@@ -1,0 +1,24 @@
+cambiar tamaño del revery area
+ALTER SYSTEM  SET DB_RECOVERY_FILE_DEST_SIZE = 100G
+para guardar los archivos productos del backup en otro disco se debe cambiar el path con este comando:
+ALTER SYSTEM SET DB_RECOVERY_FILE_DEST = '/dba/backup/';
+Los jobs funcionan correctamente aplicando todas las estrategias planteadas localmente en la carpeta y paths que ya estan definidos 
+SEGUIR LA ESTRUCTURA de la DB AL PIE DE LA LETRA.
+SI vas a cambiar la ruta de la parte de estrategias y backup hacerlo con sumo cuidado pq sino no te va a funcionar.
+Version preliminar del documento ya tiene correciones.
+
+ $ rman target=/ catalog RMAN_user; 
+ para hacer un drop offline: ALTER DATABASE DATAFILE 'C:\GO\Areas\TS1\TS1.dbf' OFFLINE DROP;
+  ALTER tablespace TS1 ONLINE;
+--espejos
+--ALTER DATABASE ADD LOGFILE MEMBER 'C:\GO\FlashRecoveryArea\GROUP1\log1espejo.rdo' TO GROUP 1;
+--ALTER DATABASE ADD LOGFILE MEMBER 'C:\GO\FlashRecoveryArea\GROUP2\log2espejo.rdo' TO GROUP 2;
+--ALTER DATABASE ADD LOGFILE MEMBER 'C:\GO\FlashRecoveryArea\GROUP3\log3espejo.rdo' TO GROUP 3;
+
+--recuperar desde el ultimo full-backup
+--ALTER DATABASE DATAFILE 'C:\GO\Areas\TS1\TS1.dbf' OFFLINE DROP; -- en este punto no se puede acceder a rman
+--ALTER DATABASE OPEN resetlogs; -- aqui si, hasta open verdad
+--SQL> select file_id, file_name from dba_data_files;
+--RMNAN> RESTORE DATAFILE 4;
+--SQL> recover tablespace TS1;
+--SQL>ALTER DATABASE DATAFILE 'C:\GO\Areas\TS1\TS1.dbf' ONLINE;

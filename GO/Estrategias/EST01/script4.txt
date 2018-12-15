@@ -1,0 +1,6 @@
+RUN{
+    BACKUP DATABASE;
+    BACKUP DATABASE PLUS ARCHIVELOG;
+    BACKUP AS COMPRESSED backupset format 'C:\GO\BACKUP\FullBackup\fullbackup_%d_%u_%t.bkupset' database; 		
+    BACKUP CURRENT CONTROLFILE;
+}

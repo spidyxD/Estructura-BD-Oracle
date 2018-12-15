@@ -1,0 +1,5 @@
+RUN{
+    BACKUP TABLESPACE TS1;
+    BACKUP AS COMPRESSED backupset format 'C:\GO\BACKUP\Parcial\parcial_%d_%u_%t.bkupset' tablespace TS1;
+}
+

@@ -1,0 +1,6 @@
+RUN{
+    BACKUP TABLESPACE TS1 PLUS ARCHIVELOG;
+    BACKUP CURRENT CONTROLFILE;
+    BACKUP AS COMPRESSED backupset format 'C:\GO\BACKUP\ParcialCompleto1\parcialCompleto1_%d_%u_%t.bkupset' tablespace TS1; 
+}
+

@@ -1,0 +1,90 @@
+CREATE PUBLIC DATABASE LINK OSCAR
+CONNECT TO ROGER IDENTIFIED BY ROGER
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 10.251.33.78)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG2 ) )
+)';
+
+
+CREATE PUBLIC DATABASE LINK JEIKO
+CONNECT TO ROGER IDENTIFIED BY ROGER
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 10.251.33.83)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG2 ) )
+)';
+
+CREATE PUBLIC DATABASE LINK UG1
+CONNECT TO UG2 IDENTIFIED BY UG2
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 10.251.33.83)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG1 ) )
+)';
+
+
+
+CREATE PUBLIC DATABASE LINK UG3
+CONNECT TO UG2 IDENTIFIED BY UG2
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 10.251.33.83)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG3 ) )
+)';
+
+CREATE PUBLIC DATABASE LINK UG4
+CONNECT TO UG2 IDENTIFIED BY UG2
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 10.251.33.83)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG4 ) )
+)';
+
+CREATE PUBLIC DATABASE LINK UG5
+CONNECT TO UG2 IDENTIFIED BY UG2
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 10.251.33.83)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG5 ) )
+)';
+
+CREATE PUBLIC DATABASE LINK UG6
+CONNECT TO UG2 IDENTIFIED BY UG2
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 10.251.33.83)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG6 ) )
+
+
+CREATE PUBLIC DATABASE LINK ADRIAN
+CONNECT TO ADRIAN IDENTIFIED BY ADRIAN
+USING '(description = 
+(address = 
+(protocol = tcp)
+(host = 25.8.83.121)
+(Port = 1521) )
+(connect_data = 
+(SERVICE_NAME = DBLG2 ) )
+)';
