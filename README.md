@@ -1,6 +1,8 @@
 #This is a simple Data Base Oracle estructure.
 
 After creating the physical architecture
+
+
 1- Create or edit init.ora
 
 2- Create or edit script create database see file -> build.sql
