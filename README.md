@@ -1,21 +1,21 @@
 #This is a simple Data Base Oracle estructure.
-Despues de crear la arquitectura fisica
-1- Crear o editar init.ora
 
-2- Crear o editar script create database ver archivo --> build.sql
+After creating the physical architecture
+1- Create or edit init.ora
+
+2- Create or edit script create database see file -> build.sql
  
-4- shutdown en la consola de oracle luego correr el archivo build.sql ejemplo: @'C:\Users\Addiel\Desktop\tutorial_BuildBD_ORACLE\build.sql'
+4- shutdown in the oracle console then run the file build.sql example: @ 'C: \ Users \ Addiel \ Desktop \ tutorial_BuildBD_ORACLE \ build.sql'
 
-5- correr script catalog el cual incorpora diccionario de oracle --añadir ruta de donde se encuentra
-	@C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\catalog.sql
+5- run script catalog which incorporates oracle dictionary --add path where you are
+@C: \ oraclexe \ app \ oracle \ product \ 11.2.0 \ server \ rdbms \ admin \ catalog.sql
 
-6- correr script catproc --> contiene tablas de simbolos para crear functions, procedures , etc
-	@C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\catproc.sql
+6- run script catproc -> contains tables of symbols to create functions, procedures, etc.
+@C: \ oraclexe \ app \ oracle \ product \ 11.2.0 \ server \ rdbms \ admin \ catproc.sql
 
-7- Si todo lo anterior esta correcto ingresar el comando:
-	ALTER database OPEN;
+7- If all the above is correct enter the command:
+ALTER database OPEN;
 
-8- crear tablespaces 
-	CREATE TABLESPACE A1 datafile 'C:\MDR\A1\A1.DBF' SIZE 100M;
-*SI LA CREACION DE LA BASE FALLA LIMPIAR LOS ARCHIVOS DE LA ESTRUCTURA
-
+8- create tablespaces
+CREATE TABLESPACE A1 datafile 'C: \ MDR \ A1 \ A1.DBF' SIZE 100M;
+* IF THE CREATION OF THE BASE FAILS TO CLEAN THE FILES OF THE STRUCTURE
